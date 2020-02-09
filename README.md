@@ -1,10 +1,13 @@
-# prompt-notes
-A simple program that lets you add a short note to your command line prompt.
+# Notes
+A simple bash function that lets you add a short note to an ever growing notes.txt file.
 
-# Idea
+# Installation
+Add the function to your `.bashrc` or `.bash_aliases` and change the location of the notes file as necessary. I keep it in Dropbox. Then `source .bashrc` (or `source .bash_aliases`).
 
-The idea is that sometimes you want to note down something quick and short to remember while working. For me, the most visible place is the command line prompt, since it's always there. This means having a note there is quite annoying, so it's motivating to get rid of it. 
+# Use
+`note <some-text>` to add a string of text to the end of the notes file. The script always makes a new line and prepends the current date.
+`note -o <some-text>` same thing, but the script also opens vim at the end of the text file. Useful if you want add more text, which is nicer to do in a text editor. 
 
-# Implementation
+# Idea for extension
 
-Need to look at how command line prompts are changed (I know some tools do this to show various other information). Is it just about modifying the PS1 variable and sourcing?
+Show the beginning of last entry in the terminal prompt. This could be useful for todos or for keeping track of what one is working on. Might be too annoying though. It might also be conflating a "todo" list with a "done" list.
