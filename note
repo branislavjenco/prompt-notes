@@ -1,0 +1,11 @@
+#!/bin/bash
+NOTES_LOCATION=/home/brano/Dropbox/notes.txt
+note() {
+  if [ $1 = "-o" ]
+    then 
+      echo -e "\n$(date +'%Y-%m-%d') ${*:2}" >> $NOTES_LOCATION 
+      vim $NOTES_LOCATION -c "normal G $"
+    else 
+      echo -e "\n$(date +'%Y-%m-%d') $*" >> $NOTES_LOCATION
+  fi
+}
