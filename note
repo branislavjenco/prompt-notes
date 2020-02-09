@@ -1,5 +1,5 @@
 #!/bin/bash
-NOTES_LOCATION=/home/brano/Dropbox/notes.txt
+NOTES_LOCATION=~/notes.txt
 note() {
   if [ $1 = "-o" ]
     then 
